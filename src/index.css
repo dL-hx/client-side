@@ -1,13 +1,98 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  color:#fff;
+  background:#333;
+}
+
+.App{
+  max-width: 600px;
+  margin: auto;
+}
+
+.App>h1{
+  text-align: center;
+  margin: 10px;
+}
+
+.Item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #444;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+
+}
+
+.Item--text h1{
+  color:#f59609
+}
+
+.Item--button button{
+  background: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.Item--button__delete{
+  border: 1px solid #ce0404;
+  color: #ce0404;
+}
+
+.Item--button__done{
+  border: 1px solid #05b873;
+  color: #05b873;
+  margin-right: 10px;
+}
+
+.hide-button{
+  display: none;
+}
+
+.done-task{
+  text-decoration: line-through;
+  color: #777!important;
+}
+
+.Form{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #444;
+  margin-bottom: 15px;
+}
+
+
+.Form>div{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+
+
+.Form input{
+  display: block;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #f59609;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+
+.Form button{
+  background: #f59609;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin: 5px;
+  cursor: pointer;
 }
