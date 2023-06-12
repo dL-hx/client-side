@@ -1,5 +1,13 @@
 ![](Snipaste_2023-06-07_01-56-50.png)
 https://github.com/dL-hx/client-side
+
+```
+node -v
+v16.13.0
+```
+
+
+
 ## axios
 npm i axios
 
