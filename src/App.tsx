@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 import './App.css';
 import TaskCreator from './components/TaskCreator';
 import TaskItem from './components/TaskItem';
-import { addTask, deleteTask, getTaskList } from './apis';
+import { addTask, deleteTask, getTaskList, setTaskDone } from './apis';
 
 const App: FC = () => {
   const [tasks, setTasks] = useState<Task[]>([])
@@ -30,9 +30,11 @@ const App: FC = () => {
   }
 
   const handleSetTaskDone = (id: number) => {
-    let doneTaskIndex = tasks.findIndex(y => y.id == id)
-    tasks[doneTaskIndex].isDone = true
-    setTasks([...tasks])
+    setTaskDone(id).then(p=>{
+      let doneTaskIndex = tasks.findIndex(y => y.id == id)
+      tasks[doneTaskIndex].isDone = true
+      setTasks([...tasks])
+    })
   }
   return (
     <div className="App">
